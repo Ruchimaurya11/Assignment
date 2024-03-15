@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADD remove</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .effect {
+        background-color: green;
+        color:pink;
+    }
+</style>
+</head>
+<body>
+
+<button id="addClass">Add class</button>
+<button id="removeClass">Remove class</button>
+<div id="targetElement">This is the target element</div>
+
+<script>
+$(document).ready(function(){
+    $("#addClass").click(function(){
+        $("#targetElement").addClass("effect ");
+    });
+
+    $("#removeClass").click(function(){
+        $("#targetElement").removeClass("effect ");
+    });
+});
+</script>
+
+</body>
+</html>

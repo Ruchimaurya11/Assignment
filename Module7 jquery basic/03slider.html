@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> .slider-container {
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .slider img {
+        width: 800px;
+        height: 800px;
+      }</style>
+</head>
+<body>
+    <div class="slider">
+        <img src="drop-3698073_1280.jpg" alt="Image 1">
+        <img src="edgar-ELLEmBuI0k4-unsplash.jpg" alt="Image 2">
+        <img src="edgar-P3mJ2DRu9fY-unsplash.jpg" alt="Image 3">
+      </div>
+    </div>
+      
+    
+      <script>
+        $(document).ready(function() {
+  // Change background color of an element with ID "myElement" to red
+  $("#myElement").css("background-color", "red");
+});
+      document.addEventListener("DOMContentLoaded", function() {
+        const slider = document.querySelector(".slider");
+        let counter = 0;
+        const slideWidth = slider.clientWidth;
+      
+        function slide() {
+          counter++;
+          if (counter === slider.children.length) {
+            counter = 0;
+          }
+          slider.style.transform = `translateX(-${slideWidth * counter}px)`;
+        }
+      
+        setInterval(slide, 2000); // Change slides every 2 seconds
+      });
+      $(document).ready(function() {
+  // Add class "active" to an element with ID "myElement"
+  $("#myElement").addClass("active");
+
+  // Remove class "active" from an element with ID "myElement"
+  $("#myElement").removeClass("active");
+});
+$(document).ready(function() {
+  // Animate the width of an element with ID "myElement" to 300px
+  $("#myElement").animate({
+    width: "300px"
+  }, 1000); // Animation duration is 1000 milliseconds (1 second)
+});
+    </script>
+</body>
+</html>
