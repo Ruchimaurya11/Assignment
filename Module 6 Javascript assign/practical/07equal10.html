@@ -1,0 +1,31 @@
+<!--  Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Check if typeof '10' is exactly equal to 10
+if (typeof '10' !== typeof 10) {
+    // Convert '10' to a number
+    var convertedValue = parseInt('10');
+
+    // Check if it's exactly equal to 10
+    if (convertedValue === 10) {
+        console.log("'10' is now exactly equal to 10 after conversion.");
+    } else {
+        console.log("'10' cannot be converted to exactly equal to 10.");
+    }
+} else {
+    console.log("'10' is already exactly equal to 10.");
+}
+
+    </script>
+    
+</body>
+</html>

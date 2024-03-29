@@ -1,0 +1,26 @@
+<!-- Q.34 Write to print number in reverse order e.g.: number = 64728 --->  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseFunction(num) {
+    let digits = Array.from(String(num), Number);
+    let reversedArray = digits.reduce((acc, digit) =>
+        [digit, ...acc], []);
+    return parseInt(reversedArray.join(''));
+}
+ 
+let num = 64728;
+let reversedNum = reverseFunction(num);
+ 
+document.write(reversedNum);
+    </script>
+</body>
+</html>

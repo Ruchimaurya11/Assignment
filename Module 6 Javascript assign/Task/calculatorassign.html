@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            font-size: 30px;
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+        }
+        body{
+            
+            background-size: cover;
+            height: 87vh;
+        }
+        .parent{
+    
+            width:fit-content;
+            padding: 10px 40px 40px 40px ;
+            margin-top: 100px;
+            background: rgb(203, 192, 192);
+            border: 5px black solid;
+            border-radius: 20px;
+            
+        }
+        input{
+            border: none;
+            outline: none;
+            height: 21px;
+            border-radius: 5px;
+        
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body> 
+    <center>
+
+   
+    <div class="parent"> 
+
+   
+    <table cellspacing="19px">
+        <h1>calculator</h1>
+        <tr>
+            <td>Enter 1st Number : </td>
+            
+            <td>
+               &nbsp; &nbsp;&nbsp;<input type="number" id="one">
+            </td>
+        </tr>
+       
+        <tr>
+           
+            <td>Enter 2st Number : </td>
+            <td>
+                &nbsp;&nbsp;&nbsp; <input type="number" id="two">
+            </td>
+        </tr>
+        <tr>
+           <td>Answer is :</td>
+           <td id="answw"> 
+            <!-- <input type="text"  id="three"> -->
+            <p id="output"></p>
+           </td>
+        </tr>
+    </table>
+    <button class="btn" onclick="add()">+</button>
+    <button class="btn" onclick="sub()">-</button>
+   
+    <br>
+    <button class="btn" onclick="mult()">*</button>
+    <button class="btn" onclick="div()">/</button>
+    <button class="btn" onclick="per()">%</button>
+
+</div>
+</center>
+
+    <script>
+        function add() {
+            let a =  document.getElementById("one");
+            let b = document.getElementById("two");
+            
+
+
+            let d = Number(a.value) + Number(b.value);
+
+           let e =  document.getElementById("output").innerHTML = d;
+        
+        }
+        function sub() {
+            let a =  document.getElementById("one");
+            let b = document.getElementById("two");
+            
+
+
+            let d = Number(a.value) - Number(b.value)
+
+            document.getElementById("output").innerHTML = d;
+        }
+        function mult() {
+            let a =  document.getElementById("one");
+            let b = document.getElementById("two");
+            
+
+
+            let d = Number(a.value) * Number(b.value)
+
+            document.getElementById("answw").innerHTML = d;
+        }
+        function div() {
+            let a =  document.getElementById("one");
+            let b = document.getElementById("two");
+    
+
+
+            let d = Number(a.value) / Number(b.value)
+
+            document.getElementById("answw").innerHTML = d;
+        }
+        function per() {
+            let a =  document.getElementById("one");
+            let b = document.getElementById("two");
+            
+
+
+            let d = Number(a.value) % Number(b.value)
+
+            document.getElementById("answw").innerHTML = d;
+        }
+    </script>
+
+</body>
+</html>

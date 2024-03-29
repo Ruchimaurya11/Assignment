@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+    function yearsToDays(years) {
+        return years * 365.25; // Accounting for leap years
+    }
+    
+    
+    function daysToYears(days) {
+        return days / 365.25; // Accounting for leap years
+    }
+    
+    // Example usage:
+    var years = 2; // Example number of years
+    var days = yearsToDays(years);
+    document.write(years + " years is equal to " + days + " days.");
+    
+    
+    var daysInput = 956; // Example number of days
+    var yearsOutput = daysToYears(daysInput);
+    document.write(daysInput + " days is equal to " + yearsOutput.toFixed(2) + " years.");
+</Script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border: 1px solid black;
+            height: fit-content;
+            width: 600px;
+            padding: 10px 30px;
+
+        }
+
+        h3 {
+            
+            text-align: center;
+            padding: 10px 50px;
+        }
+
+        button {
+            padding: 15px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+   
+    <form action="" method="post" onsubmit="return myfunction()">
+        <div>
+
+            <h1>Marsheet </h1>
+            <h3>Enter Marks </h3>
+            <table border="0" cellpadding="14px">
+                <tr>
+                    <td> C Language </td>
+                    <td><input type="text" name="c" id="one" maxlength="100"  ></td>
+                
+                    <td> C++ Language </td>
+                    <td><input type="text" name="c++" id="two" min="1" max="100"></td>
+                </tr>
+                <tr>
+                    <td> Database</td>
+                    <td><input type="text" name="db" id="three" min="1" max="100"></td>
+               
+                    <td> HTML</td>
+                    <td><input type="text" name="html" id="four" min="1" max="100"></td>
+                </tr>
+                <tr>
+                    <td> CSS</td>
+                    <td><input type="text" name="css" id="five" min="1" max="100"></td>
+               
+                    <td> PHP</td>
+                    <td><input type="text" name="php" id="six" min="1" max="100"></td>
+                </tr>
+                <tr>
+                    
+                
+                    <td></td>
+                    <td> <input type="submit" name="submit" value="Result"/></td>
+                </tr>
+
+                <tr>
+                    <!-- <td></td> -->
+                    <td>Total is : <span id="demo"></span> &nbsp; &nbsp; &nbsp;/600 </td>
+                    <td></td>
+                    <td >percentage is : <span  id="perc"></span> and Grade is :  <span  id="grade"></span> </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</center>
+    <script>
+
+
+function myfunction() {
+    let one = document.getElementById('one').value;
+    let two = document.getElementById('two').value;
+    let three = document.getElementById('three').value;
+    let four = document.getElementById('four').value;
+    let five = document.getElementById('five').value;
+    let six = document.getElementById('six').value;
+    let seven = document.getElementById('seven').value;
+
+    // Calculate total using Number(value) 
+    let total = Number(one) + Number(two) + Number(three) + Number(four) + Number(five) +
+        Number(six) + Number(seven);
+
+    // Display total
+    document.getElementById('demo').innerHTML = total;
+
+    // Check if total is over 350
+    if (total > 700) {
+        document.getElementById('demo').innerHTML = 'Only 700 and under value allowed';
+        return false;
+    }
+    else
+    {
+            // Calculate percentage
+            let per = (total/700)*100;
+            document.getElementById('perc').innerHTML = per
+
+            // Display grade based on percentage
+            if (per >= 90) {
+                document.getElementById('grade').innerHTML = "Grade : A";
+            } 
+            else if (per >= 70) {
+                document.getElementById('grade').innerHTML = "Grade : B";
+            } 
+            else if (per >= 60) {
+                document.getElementById('grade').innerHTML = "Grade : C";
+            } 
+            else if (per >= 100) {
+                document.getElementById('grade').innerHTML = "Grade : D";
+            } 
+            else {
+                document.getElementById('grade').innerHTML = "Fail";
+            }
+
+            return false;
+        }
+    }
+
+
+
+
+    </script>
+</body>
+
+</html>

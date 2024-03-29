@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fahrenheitToCelsius(fahrenheit) {
+    var celsius;
+    if (fahrenheit == null || isNaN(fahrenheit)) {
+        return "Invalid input";
+    } else {
+        celsius = (fahrenheit - 32) * 5 / 9;
+        return celsius;
+    }
+}
+
+// Example usage:
+var fahrenheitTemp = 68; // Example Fahrenheit temperature
+var celsiusTemp = fahrenheitToCelsius(fahrenheitTemp);
+console.log(fahrenheitTemp + "°F is equal to " + celsiusTemp.toFixed(2) + "°C.");
+
+// Handling invalid input
+var invalidTemp = "abc"; // Example invalid input
+var result = fahrenheitToCelsius(invalidTemp);
+console.log(result); // Output: Invalid input
+
+    </script>
+</body>
+</html>

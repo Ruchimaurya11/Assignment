@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider Example</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<style>
+    img{
+        height: 80vh;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+</head>
+<body>
+  <div class="slider">
+    <div><img src="Screenshot_2020_0828_090224.png" alt="Image 1"></div>
+    <div><img src="Screenshot_2020_0828_090057.png" alt="Image 2"></div>
+    <div><img src="Screenshot 2024-01-18 144905.png" alt="Image 3"></div>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick();
+    });
+  </script>
+</body>
+</html>
