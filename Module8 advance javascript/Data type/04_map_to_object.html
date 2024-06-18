@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Ruchi = { name: "Ruchi", surname: "Maurya", id: 1 };
+        let Ayan = { name: "Ayan", surname: "Maurya", id: 2 };
+        let Shreya = { name: "Shreya", surname: "Kushwaha", id: 3 };
+        
+        let users = [Ruchi,Ayan ,Shreya ];
+        
+        
+        let usersMapped = users.map(user => ({
+            fullName: `${user.name} ${user.surname}`,
+            id: user.id
+        }));
+        
+        
+        alert(usersMapped[0].id); // 1
+        alert(usersMapped[0].fullName); 
+        console.log(usersMapped)
+    </script>
+</body>
+</html>
